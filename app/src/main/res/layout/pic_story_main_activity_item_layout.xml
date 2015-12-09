@@ -57,14 +57,19 @@
         android:textSize="@dimen/text_font_size_title_16sp"
         app:textColor="@color/primary_text" />
 
-    <ImageView
-        android:id="@+id/pic_story_main_activity_item_iv"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="@dimen/bottom_margin_big_10dp"
         android:layout_marginLeft="@dimen/left_margin_big_10dp"
-        android:layout_marginRight="@dimen/right_margin_big_10dp"
-        android:scaleType="centerCrop" />
+        android:layout_marginRight="@dimen/right_margin_big_10dp">
+
+        <ImageView
+            android:id="@+id/pic_story_main_activity_item_iv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scaleType="fitXY" />
+    </LinearLayout>
+
 
     <!--<View-->
     <!--android:layout_width="match_parent"-->

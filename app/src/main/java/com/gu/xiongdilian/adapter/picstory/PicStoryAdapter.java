@@ -1,6 +1,7 @@
 package com.gu.xiongdilian.adapter.picstory;
 
 import android.content.Context;
+import android.media.Image;
 import android.text.SpannableString;
 import android.text.TextUtils;
 import android.view.View;
@@ -50,7 +51,8 @@ public class PicStoryAdapter extends MyBaseAdapter<PicStory> {
         }
         viewHolder.setTextView(R.id.pic_story_creater_tv, picStory.getAuthor().getUsername());
         viewHolder.setTextView(R.id.pic_story_create_time_tv, picStory.getCreatedAt());
-        viewHolder.setNormalImgPath(R.id.pic_story_main_activity_item_iv, picStory.getPicUrl());
+        ImageView picImg = viewHolder.getView(R.id.pic_story_main_activity_item_iv);
+        DrawableUtils.displayAutoImgOnNet(picImg, picStory.getPicUrl());
         viewHolder.setTextView(R.id.pic_story_view_num_tv, picStory.getViewNum() + "");
         viewHolder.setTextView(R.id.pic_story_praise_num_tv, picStory.getPraiseNum() + "");
         MTextView mTextView = viewHolder.getView(R.id.pic_story_desc_tv);
