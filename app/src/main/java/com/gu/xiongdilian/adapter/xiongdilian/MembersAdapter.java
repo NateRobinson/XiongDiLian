@@ -56,7 +56,6 @@ public class MembersAdapter extends MyBaseAdapter<Account> {
             viewHolder.setTextView(R.id.member_desc, account.getNick());
         }
         viewHolder.setTextView(R.id.member_name, account.getUsername());
-        viewHolder.setTextView(R.id.people_friend_num_tv, account.getFriendNum() + "");
         viewHolder.setTextView(R.id.post_num_tv, account.getPostNum() + "");
         viewHolder.setTextView(R.id.pic_story_num_tv, account.getPicStoryNum() + "");
         Button addAndDelBtn = viewHolder.getView(R.id.add_del_friend_iv);

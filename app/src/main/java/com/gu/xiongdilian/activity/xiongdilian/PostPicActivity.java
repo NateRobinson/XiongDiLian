@@ -157,6 +157,13 @@ public class PostPicActivity extends XDLBaseWithCheckLoginActivity {
             }
         });
 
+        pager.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
+
         pager.setCurrentItem(position);
         positionTv.setText((position + 1) + "/" + size);
     }

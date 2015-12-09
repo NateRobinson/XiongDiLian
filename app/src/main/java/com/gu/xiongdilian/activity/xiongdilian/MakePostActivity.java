@@ -4,6 +4,7 @@ import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.view.ViewPager.OnPageChangeListener;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -248,8 +249,8 @@ public class MakePostActivity extends XDLBaseWithCheckLoginActivity implements O
                         incrementAccountPostNum();
                         //发送一个事件，告诉OneXiongDiLianDetailActivity and MyXiongDiLianHomeActivity
                         //此时需要实时更改一下对应兄弟连的数据：帖子数
-                        mXiongDiLian.setPostNum(mXiongDiLian.getPostNum()+1);
-                        EventBus.getDefault().post(new XiongDiLianEvent(mXiongDiLian,post));
+                        mXiongDiLian.setPostNum(mXiongDiLian.getPostNum() + 1);
+                        EventBus.getDefault().post(new XiongDiLianEvent(mXiongDiLian, post));
                     }
 
                     @Override
@@ -272,10 +273,13 @@ public class MakePostActivity extends XDLBaseWithCheckLoginActivity implements O
      * 增加用户的发帖数量
      */
     private void incrementAccountPostNum() {
-        account.increment("postNum"); // 分数递增1
-        account.update(this, new UpdateListener() {
+        Account incrementAccount = new Account();
+        incrementAccount.increment("postNum"); // 分数递增1
+        incrementAccount.setObjectId(account.getObjectId());
+        incrementAccount.update(this, new UpdateListener() {
             @Override
             public void onSuccess() {
+                LogUtils.e(TAG_LOG, "success");
                 dismissLoadingDialog();
                 Intent mIntent = new Intent();
                 setResult(RESULT_OK, mIntent);
@@ -284,6 +288,7 @@ public class MakePostActivity extends XDLBaseWithCheckLoginActivity implements O
 
             @Override
             public void onFailure(int arg0, String arg1) {
+                LogUtils.e(TAG_LOG, "fail==>" + arg1);
                 dismissLoadingDialog();
                 finish();
                 showToast(R.string.person_post_num_increate_error);
