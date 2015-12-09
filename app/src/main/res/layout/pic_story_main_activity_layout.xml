@@ -10,7 +10,9 @@
         android:id="@+id/pic_story_main_list"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:cacheColorHint="@color/transparent" />
+        android:cacheColorHint="@color/transparent"
+        android:divider="@color/divider"
+        android:dividerHeight="8dp" />
 
     <LinearLayout
         android:id="@+id/list_empty_ll"
