@@ -164,7 +164,7 @@
     </style>
 
     <style name="Smile.TextView._Gray">
-        <item name="android:textColor">@color/base_color_text_gray</item>
+        <item name="android:textColor">@color/secondary_text</item>
     </style>
 
     <style name="Smile.TextView._Black">

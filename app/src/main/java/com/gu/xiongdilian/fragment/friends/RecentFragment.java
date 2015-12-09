@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.AdapterView.OnItemLongClickListener;
+import android.widget.LinearLayout;
 import android.widget.ListView;
 
 import com.flyco.animation.FadeExit.FadeExit;
@@ -34,6 +35,8 @@ import cn.bmob.im.db.BmobDB;
 public class RecentFragment extends XDLBaseFragment implements OnItemClickListener, OnItemLongClickListener {
     @InjectView(R.id.list)
     ListView listview;
+    @InjectView(R.id.list_empty_ll)
+    LinearLayout list_empty_ll;
     private MessageRecentAdapter adapter;
     private boolean hidden;
 
@@ -88,6 +91,7 @@ public class RecentFragment extends XDLBaseFragment implements OnItemClickListen
                 new MessageRecentAdapter(getActivity(), R.layout.item_conversation, BmobDB.create(getActivity())
                         .queryRecents());
         listview.setAdapter(adapter);
+        listview.setEmptyView(list_empty_ll);
     }
 
     @Override

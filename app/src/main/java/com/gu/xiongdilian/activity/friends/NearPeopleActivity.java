@@ -41,7 +41,7 @@ public class NearPeopleActivity extends XDLBaseWithCheckLoginActivity implements
 
     private List<Account> nears = new ArrayList<>();
 
-    private double QUERY_KILOMETERS = 1;// 默认查询1公里范围内的人
+    private double QUERY_KILOMETERS = 10;// 默认查询10公里范围内的人
 
     private int curPage = 0;
 
@@ -152,19 +152,15 @@ public class NearPeopleActivity extends XDLBaseWithCheckLoginActivity implements
     public void onLoadMore() {
         double latitude = Double.parseDouble(mApplication.getLatitude());
         double longtitude = Double.parseDouble(mApplication.getLongtitude());
-        // 这是查询10公里范围内的性别为女用户总数
         userManager.queryKiloMetersTotalCount(Account.class,
                 "location",
                 longtitude,
                 latitude,
                 true,
                 QUERY_KILOMETERS,
-                "sex",
-                false,
+                null,
+                null,
                 new CountListener() {
-                    // 这是查询附近的人且性别为女性的用户总数
-                    // userManager.queryNearTotalCount(Account.class, "location", longtitude, latitude, true,"sex",false,new
-                    // CountListener() {
                     @Override
                     public void onSuccess(int arg0) {
                         if (arg0 > nears.size()) {
@@ -188,8 +184,7 @@ public class NearPeopleActivity extends XDLBaseWithCheckLoginActivity implements
      * 初始化XListView
      */
     private void initXListView() {
-        // 首先不允许加载更多
-        mListView.setPullLoadEnable(false);
+        mListView.setPullLoadEnable(true);
         // 允许下拉
         mListView.setPullRefreshEnable(true);
         adapter = new NearPeopleAdapter(this, R.layout.item_near_people, nears);
@@ -223,12 +218,9 @@ public class NearPeopleActivity extends XDLBaseWithCheckLoginActivity implements
                     latitude,
                     true,
                     QUERY_KILOMETERS,
-                    "sex",
-                    false,
+                    null,
+                    null,
                     new FindListener<Account>() {
-                        // 此方法默认查询所有带地理位置信息的且性别为女的用户列表，如果你不想包含好友列表的话，将查询条件中的isShowFriends设置为false就行
-                        // userManager.queryNearByListByPage(isUpdate,0,"location", longtitude, latitude,
-                        // true,"sex",false,new FindListener<Account>() {
                         @Override
                         public void onSuccess(List<Account> arg0) {
                             if (CollectionUtils.isNotNull(arg0)) {
@@ -281,7 +273,6 @@ public class NearPeopleActivity extends XDLBaseWithCheckLoginActivity implements
     private void queryMoreNearList(int page) {
         double latitude = Double.parseDouble(mApplication.getLatitude());
         double longtitude = Double.parseDouble(mApplication.getLongtitude());
-        // 查询10公里范围内的性别为女的用户列表
         userManager.queryKiloMetersListByPage(true,
                 page,
                 "location",
@@ -289,12 +280,9 @@ public class NearPeopleActivity extends XDLBaseWithCheckLoginActivity implements
                 latitude,
                 true,
                 QUERY_KILOMETERS,
-                "sex",
-                false,
+                null,
+                null,
                 new FindListener<Account>() {
-                    // 查询全部地理位置信息且性别为女性的用户列表
-                    // userManager.queryNearByListByPage(true,page, "location", longtitude, latitude, true,"sex",false,new
-                    // FindListener<Account>() {
                     @Override
                     public void onSuccess(List<Account> arg0) {
                         if (CollectionUtils.isNotNull(arg0)) {

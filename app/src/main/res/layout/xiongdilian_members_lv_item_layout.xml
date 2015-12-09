@@ -40,7 +40,6 @@
                 android:gravity="top|left"
                 android:maxEms="7"
                 android:singleLine="true"
-                android:text="顾学武"
                 android:textColor="@color/primary_text"
                 android:textSize="@dimen/text_font_size_title_16sp" />
 
@@ -53,7 +52,6 @@
                 android:ellipsize="end"
                 android:gravity="center_vertical"
                 android:singleLine="true"
-                android:text="喜欢打球。。。"
                 android:textColor="@color/secondary_text"
                 android:textSize="@dimen/text_font_size_content_14sp" />
 
@@ -78,7 +76,6 @@
                     android:ellipsize="end"
                     android:gravity="center"
                     android:singleLine="true"
-                    android:text="362"
                     android:textColor="@color/secondary_text"
                     android:textSize="@dimen/text_font_size_small_12sp" />
 
@@ -97,7 +94,6 @@
                     android:ellipsize="end"
                     android:gravity="center"
                     android:singleLine="true"
-                    android:text="41"
                     android:textColor="@color/secondary_text"
                     android:textSize="@dimen/text_font_size_small_12sp" />
 
@@ -116,7 +112,6 @@
                     android:ellipsize="end"
                     android:gravity="center"
                     android:singleLine="true"
-                    android:text="41"
                     android:textColor="@color/secondary_text"
                     android:textSize="@dimen/text_font_size_small_12sp" />
 
@@ -126,12 +121,14 @@
 
         <Button
             android:id="@+id/add_del_friend_iv"
-            android:layout_width="wrap_content"
-            android:layout_height="32dp"
+            android:layout_width="50dp"
+            android:layout_height="35dp"
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/left_margin_normal_8dp"
             android:gravity="center"
-            android:text="sss" />
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_font_size_small_12sp" />
 
     </LinearLayout>
 

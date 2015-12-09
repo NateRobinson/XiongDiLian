@@ -7,7 +7,6 @@ import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
-import android.widget.ImageView;
 
 import com.flyco.animation.FadeExit.FadeExit;
 import com.flyco.animation.FlipEnter.FlipVerticalSwingEnter;
@@ -62,27 +61,13 @@ public class MembersAdapter extends MyBaseAdapter<Account> {
         viewHolder.setTextView(R.id.pic_story_num_tv, account.getPicStoryNum() + "");
         Button addAndDelBtn = viewHolder.getView(R.id.add_del_friend_iv);
 
-        viewHolder.getView(R.id.xiongdilian_member_item_ll).setOnClickListener(new OnClickListener() {
-            @Override
-            public void onClick(View v) {
-//                Intent intent = new Intent(getContext(), SetMyInfoActivity.class);
-//                if (mAccount.getObjectId().endsWith(account.getObjectId())) {
-//                    intent.putExtra("from", "me");
-//                } else {
-//                    intent.putExtra("from", "other");
-//                }
-//                intent.putExtra("username", account.getUsername());
-//                getContext().startActivity(intent);
-            }
-        });
-
         if (mAccount.getObjectId().endsWith(account.getObjectId())) {
-            addAndDelBtn.setVisibility(View.VISIBLE);
-            addAndDelBtn.setBackgroundResource(R.drawable.accout_self_bg);
+            addAndDelBtn.setBackgroundResource(R.drawable.member_list_self_btn_bg);
+            addAndDelBtn.setText("自己");
         } else {
-            addAndDelBtn.setVisibility(View.VISIBLE);
             if (XiongDiLianApplication.getXiongDiLianInstance().getContactList().containsKey(account.getUsername())) {
-                addAndDelBtn.setBackgroundResource(R.drawable.del_friend_iv_bg);
+                addAndDelBtn.setBackgroundResource(R.drawable.del_friend_btn_bg);
+                addAndDelBtn.setText("删除");
                 addAndDelBtn.setOnClickListener(new OnClickListener() {
                     @Override
                     public void onClick(View v) {
@@ -90,7 +75,8 @@ public class MembersAdapter extends MyBaseAdapter<Account> {
                     }
                 });
             } else {
-                addAndDelBtn.setBackgroundResource(R.drawable.add_friend_iv_bg);
+                addAndDelBtn.setBackgroundResource(R.drawable.add_friend_btn_bg);
+                addAndDelBtn.setText("添加");
                 addAndDelBtn.setOnClickListener(new OnClickListener() {
                     @Override
                     public void onClick(View v) {
