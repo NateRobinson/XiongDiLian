@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="@dimen/city_list_margin_left_dimen"
+    android:paddingRight="@dimen/city_list_margin_right_dimen">
+
+    <com.gu.xiongdilian.view.citylist.MyGridView
+        android:id="@+id/public_hotcity_list"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:horizontalSpacing="10.0dip"
+        android:listSelector="@android:color/transparent"
+        android:numColumns="3"
+        android:scrollbars="none"
+        android:verticalSpacing="10.0dip" />
+</RelativeLayout>

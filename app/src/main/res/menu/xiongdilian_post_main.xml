@@ -1,0 +1,17 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/add_collect_menu"
+        android:icon="@mipmap/collect_no"
+        android:orderInCategory="100"
+        android:title="@string/collect"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/add_comment_menu"
+        android:icon="@mipmap/add_post_comment_normal"
+        android:orderInCategory="100"
+        android:title="@string/comment"
+        app:showAsAction="always" />
+</menu>

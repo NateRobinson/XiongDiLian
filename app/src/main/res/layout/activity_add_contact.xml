@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/base_bg"
+    android:orientation="vertical">
+
+    <include layout="@layout/toolbar_layout" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/et_find_name"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/et_height_normal_40dp"
+            android:layout_marginBottom="@dimen/bottom_margin_normal_8dp"
+            android:layout_marginLeft="@dimen/left_margin_big_10dp"
+            android:layout_marginTop="@dimen/top_margin_normal_8dp"
+            android:layout_weight="1.0"
+            android:background="@drawable/button_normal_shape"
+            android:hint="@string/username"
+            android:paddingLeft="5dp"
+            android:singleLine="true"
+            android:textColorHint="#b3b3b3"
+            android:textSize="@dimen/text_font_size_title_16sp" />
+
+        <Button
+            android:id="@+id/btn_search"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/et_height_normal_40dp"
+            android:layout_marginLeft="@dimen/left_margin_normal_8dp"
+            android:layout_marginRight="@dimen/right_margin_big_10dp"
+            android:background="@drawable/do_login_and_register_btn_bg"
+            android:text="@string/search"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_font_size_title_16sp" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/divider" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ListView
+            android:id="@+id/list_search"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:cacheColorHint="@android:color/transparent"
+            android:divider="@color/divider"
+            android:dividerHeight="1px"
+            android:fadingEdgeLength="0dp"
+            android:fastScrollEnabled="false" />
+
+        <LinearLayout
+            android:id="@+id/list_empty_ll"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+
+            <ImageView
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:src="@mipmap/list_is_empty" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/top_margin_normal_8dp"
+                android:text="列表为空"
+                android:textColor="@color/primary"
+                android:textSize="@dimen/text_font_size_big_24sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include layout="@layout/toolbar_layout" />
+
+    <EditText
+        android:id="@+id/make_post_title_et"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/et_height_normal_40dp"
+        android:layout_margin="@dimen/margin_normal_8dp"
+        android:background="@drawable/create_xiongdilian_edit_bg"
+        android:gravity="center_vertical"
+        android:hint="@string/make_post_title_hint"
+        android:maxLength="15"
+        android:paddingLeft="@dimen/left_padding_normal_4dp"
+        android:paddingRight="@dimen/right_padding_normal_4dp"
+        android:singleLine="true"
+        android:textColor="@color/secondary_text"
+        android:textColorHint="@color/secondary_text"
+        android:textSize="@dimen/text_font_size_title_16sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginLeft="@dimen/left_margin_normal_8dp"
+        android:layout_marginRight="@dimen/right_margin_normal_8dp"
+        android:background="@color/divider" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginBottom="@dimen/bottom_margin_normal_8dp"
+        android:layout_marginTop="@dimen/top_margin_normal_8dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/start_select_photo_iv"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginLeft="@dimen/left_margin_normal_8dp"
+            android:contentDescription="@string/start_select_photo_iv"
+            android:scaleType="centerCrop"
+            android:src="@drawable/select_photo_bg" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/left_margin_normal_8dp"
+            android:layout_marginRight="@dimen/right_margin_normal_8dp"
+            android:background="@color/divider2"
+            android:clipChildren="false"
+            android:layerType="software"
+            android:orientation="horizontal">
+
+            <HorizontalScrollView
+                android:id="@+id/make_post_picView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="1dp"
+                android:layout_marginRight="1dp"
+                android:clipChildren="false"></HorizontalScrollView>
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginLeft="@dimen/left_margin_normal_8dp"
+        android:layout_marginRight="@dimen/right_margin_normal_8dp"
+        android:background="@color/divider" />
+
+    <EditText
+        android:id="@+id/make_post_content_et"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/margin_normal_8dp"
+        android:background="@drawable/create_xiongdilian_edit_bg"
+        android:gravity="top|left"
+        android:hint="@string/make_post_content_hint"
+        android:lines="5"
+        android:maxLength="200"
+        android:paddingLeft="@dimen/left_padding_normal_4dp"
+        android:paddingRight="@dimen/right_padding_normal_4dp"
+        android:paddingTop="@dimen/top_padding_normal_4dp"
+        android:textColor="@color/secondary_text"
+        android:textColorHint="@color/secondary_text"
+        android:textSize="@dimen/text_font_size_title_16sp" />
+
+</LinearLayout>

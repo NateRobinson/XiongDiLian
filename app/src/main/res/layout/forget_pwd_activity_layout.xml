@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include layout="@layout/toolbar_layout" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/ll_height_normal_48dp"
+        android:layout_marginLeft="@dimen/left_margin_normal_8dp"
+        android:layout_marginRight="@dimen/right_margin_normal_8dp"
+        android:layout_marginTop="@dimen/top_margin_big_10dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:text="手机号"
+            android:textColor="@color/title"
+            android:textSize="@dimen/text_font_size_title_16sp" />
+
+        <EditText
+            android:id="@+id/forget_pwd_phone_et"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="@dimen/left_margin_normal_8dp"
+            android:layout_weight="1"
+            android:background="?attr/login_register_edit_bg"
+            android:hint="请输入手机号"
+            android:inputType="phone"
+            android:paddingLeft="@dimen/left_padding_big_8dp"
+            android:paddingRight="@dimen/right_padding_big_8dp"
+            android:singleLine="true"
+            android:textColor="@color/primary"
+            android:textColorHint="@color/primary"
+            android:textSize="@dimen/text_font_size_title_16sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/ll_height_normal_48dp"
+        android:layout_marginLeft="@dimen/left_margin_normal_8dp"
+        android:layout_marginRight="@dimen/right_margin_normal_8dp"
+        android:layout_marginTop="@dimen/top_margin_normal_8dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:text="验证码"
+            android:textColor="@color/title"
+            android:textSize="@dimen/text_font_size_title_16sp" />
+
+        <EditText
+            android:id="@+id/forget_pwd_vercode_et"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="@dimen/left_margin_normal_8dp"
+            android:layout_weight="1"
+            android:background="?attr/login_register_edit_bg"
+            android:hint="请输入验证码"
+            android:inputType="number"
+            android:paddingLeft="@dimen/left_margin_normal_8dp"
+            android:paddingRight="@dimen/right_padding_big_8dp"
+            android:singleLine="true"
+            android:textColor="@color/primary"
+            android:textColorHint="@color/primary"
+            android:textSize="@dimen/text_font_size_title_16sp" />
+
+        <Button
+            android:id="@+id/forget_pwd_vercode_send_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginLeft="@dimen/left_margin_normal_8dp"
+            android:background="?attr/do_login_and_register_btn_bg"
+            android:text="发送验证码"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_font_size_title_16sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/ll_height_normal_48dp"
+        android:layout_marginLeft="@dimen/left_margin_normal_8dp"
+        android:layout_marginRight="@dimen/right_margin_normal_8dp"
+        android:layout_marginTop="@dimen/top_margin_normal_8dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:text="密&#032;&#032;&#032;&#032;码"
+            android:textColor="@color/title"
+            android:textSize="@dimen/text_font_size_title_16sp" />
+
+        <EditText
+            android:id="@+id/register_pwd_et"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="@dimen/left_margin_normal_8dp"
+            android:layout_weight="1"
+            android:background="?attr/login_register_edit_bg"
+            android:hint="@string/loing_account_pwd_hint"
+            android:inputType="textPassword"
+            android:paddingLeft="@dimen/left_padding_big_8dp"
+            android:paddingRight="@dimen/right_padding_big_8dp"
+            android:singleLine="true"
+            android:textColor="@color/primary"
+            android:textColorHint="@color/primary"
+            android:textSize="@dimen/text_font_size_title_16sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/ll_height_normal_48dp"
+        android:layout_marginLeft="@dimen/left_margin_normal_8dp"
+        android:layout_marginRight="@dimen/right_margin_normal_8dp"
+        android:layout_marginTop="@dimen/top_margin_normal_8dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:text="密&#032;&#032;&#032;&#032;码"
+            android:textColor="@color/title"
+            android:textSize="@dimen/text_font_size_title_16sp" />
+
+        <EditText
+            android:id="@+id/register_pwd_comfirm_et"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="@dimen/left_margin_normal_8dp"
+            android:layout_weight="1"
+            android:background="?attr/login_register_edit_bg"
+            android:hint="@string/loing_account_pwd_confirm_hint"
+            android:inputType="textPassword"
+            android:paddingLeft="@dimen/left_padding_big_8dp"
+            android:paddingRight="@dimen/right_padding_big_8dp"
+            android:singleLine="true"
+            android:textColor="@color/primary"
+            android:textColorHint="@color/primary"
+            android:textSize="@dimen/text_font_size_title_16sp" />
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/forget_pwd_do_next_btn"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/button_height_normal_48dp"
+        android:layout_marginLeft="@dimen/left_margin_normal_8dp"
+        android:layout_marginRight="@dimen/right_margin_normal_8dp"
+        android:layout_marginTop="@dimen/top_margin_big_10dp"
+        android:background="?attr/do_login_and_register_btn_bg"
+        android:text="重置并登录"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_font_size_title_16sp" />
+</LinearLayout>

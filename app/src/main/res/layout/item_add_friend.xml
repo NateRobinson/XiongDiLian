@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:descendantFocusability="blocksDescendants">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/bottom_margin_normal_8dp"
+        android:layout_marginTop="@dimen/top_margin_normal_8dp"
+        android:duplicateParentState="true">
+
+        <ImageView
+            android:id="@+id/avatar"
+            style="@style/Smile.ImageView.Photo_Middle"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/left_margin_big_10dp"
+            android:src="@drawable/default_head" />
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/left_margin_normal_8dp"
+            android:layout_toRightOf="@id/avatar"
+            android:textColor="@color/primary_text"
+            android:textSize="@dimen/text_font_size_title_16sp" />
+
+        <Button
+            android:id="@+id/btn_add"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/et_height_normal_40dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/right_margin_big_10dp"
+            android:background="@drawable/do_login_and_register_btn_bg"
+            android:text="同意"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_font_size_title_16sp" />
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/common_toolbar"
+    style="@style/Toolbar">
+
+    <TextView
+        android:id="@+id/common_toolbar_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:textColor="@color/white"
+        android:textSize="?attr/toolbar_title_size" />
+</android.support.v7.widget.Toolbar>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/divider2"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/ll_height_normal_40dp"
+        android:layout_marginLeft="@dimen/left_margin_normal_8dp"
+        android:layout_marginRight="@dimen/right_margin_normal_8dp"
+        android:layout_marginTop="@dimen/top_margin_normal_8dp"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/search_name_et"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/edit_bg"
+            android:paddingLeft="@dimen/left_padding_normal_4dp"
+            android:paddingRight="@dimen/right_padding_normal_4dp"
+            android:singleLine="true"
+            android:textColor="@color/primary"
+            android:textSize="@dimen/text_font_size_title_16sp" />
+
+        <Button
+            android:id="@+id/do_search_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/left_margin_normal_8dp"
+            android:background="@drawable/do_create_xiongdilian_btn_bg"
+            android:text="@string/search"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_font_size_title_16sp" />
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/search_result_lv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:cacheColorHint="@color/transparent"
+        android:divider="@color/transparent"
+        android:scrollbars="none"></ListView>
+
+</LinearLayout>

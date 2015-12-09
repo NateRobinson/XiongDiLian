@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="44dp"
+    android:background="@color/white"
+    android:gravity="center">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="32.0dip"
+        android:layout_gravity="center_vertical"
+        android:layout_marginBottom="6.0dip"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="6.0dip"
+        android:background="@drawable/city_search_bg">
+
+        <ImageView
+            android:id="@+id/search_check"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="9.0dip"
+            android:src="@drawable/wb_letter_search_normal" />
+
+        <TextView
+            android:id="@+id/city_search_edittext"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5.0dip"
+            android:layout_toRightOf="@id/search_check"
+            android:gravity="center_vertical"
+            android:text="@string/city_hotcity_searchedittext_hint"
+            android:textColor="#ff94989d"
+            android:textSize="12.0sp" />
+    </RelativeLayout>
+</RelativeLayout>

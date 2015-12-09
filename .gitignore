@@ -1,0 +1,11 @@
+.gradle
+/gradle
+/local.properties
+/build
+*iml
+.idea
+
+/baseanimlistlibrary/build
+/imageselectorlibrary/build
+/app/build
+/baselibrary/build

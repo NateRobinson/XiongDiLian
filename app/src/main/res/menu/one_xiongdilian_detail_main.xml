@@ -1,0 +1,11 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/post_edit_menu"
+        android:icon="@mipmap/post_edit_normal"
+        android:orderInCategory="100"
+        android:title="@string/make_post"
+        app:showAsAction="always" />
+
+</menu>

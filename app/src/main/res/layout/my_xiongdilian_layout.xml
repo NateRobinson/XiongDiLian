@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/divider2"
+    android:orientation="vertical">
+
+    <include layout="@layout/toolbar_layout" />
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/my_xiongdilian_swipe"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ListView
+            android:id="@+id/my_xiongdilian_lv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:cacheColorHint="@android:color/transparent"
+            android:divider="@null"
+            android:fastScrollEnabled="false"
+            android:scrollbars="none"></ListView>
+
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+    <LinearLayout
+        android:id="@+id/my_xiongdilian_empty_ll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/my_xiongdilian_empty_add_iv"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@mipmap/big_add" />
+
+        <TextView
+            android:id="@+id/my_xiongdilian_empty_add_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/left_margin_big_10dp"
+            android:layout_marginRight="@dimen/right_margin_big_10dp"
+            android:layout_marginTop="@dimen/top_margin_normal_8dp"
+            android:text="还没有任何兄弟连，加入或者创建一个吧"
+            android:textColor="@color/secondary_text"
+            android:textSize="@dimen/text_font_size_big_24sp" />
+    </LinearLayout>
+
+</LinearLayout>

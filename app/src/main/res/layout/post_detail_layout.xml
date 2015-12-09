@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include layout="@layout/toolbar_layout" />
+
+    <com.gu.xiongdilian.view.XListView
+        android:id="@+id/pull_lv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="?attr/actionBarSize"
+        android:background="@color/divider2"
+        android:cacheColorHint="#00000000"
+        android:divider="@null"
+        android:listSelector="@drawable/one_xiongdilian_post_item_bg"
+        android:scrollbars="none"></com.gu.xiongdilian.view.XListView>
+
+    <LinearLayout
+        android:id="@+id/add_post_comment_ll"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/divider"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:visibility="invisible">
+
+        <EditText
+            android:id="@+id/post_comment_et"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/et_height_normal_40dp"
+            android:layout_marginLeft="@dimen/left_margin_normal_8dp"
+            android:layout_weight="1"
+            android:background="@drawable/post_comment_edit_bg"
+            android:maxLines="3"
+            android:paddingLeft="@dimen/left_padding_normal_4dp"
+            android:paddingRight="@dimen/right_padding_normal_4dp"
+            android:textColor="@color/secondary_text"
+            android:textColorHint="@color/secondary_text"
+            android:textSize="@dimen/text_font_size_title_16sp" />
+
+        <Button
+            android:id="@+id/send_comment_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginLeft="@dimen/left_margin_normal_8dp"
+            android:layout_marginRight="@dimen/right_margin_normal_8dp"
+            android:background="?attr/do_login_and_register_btn_bg"
+            android:text="发表"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_font_size_title_16sp" />
+    </LinearLayout>
+
+</RelativeLayout>

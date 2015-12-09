@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_all"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/theme_bg_color"
+    android:orientation="vertical">
+
+    <include layout="@layout/toolbar_layout" />
+
+    <RelativeLayout
+        android:id="@+id/user_data_rl"
+        android:layout_width="match_parent"
+        android:layout_height="300dp">
+
+        <ImageView
+            android:id="@+id/iv_set_avator"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_centerInParent="true"
+            android:scaleType="centerCrop" />
+
+        <LinearLayout
+            android:id="@+id/set_set_ll"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_alignBottom="@id/iv_set_avator"
+            android:layout_marginLeft="4dp"
+            android:layout_toRightOf="@id/iv_set_avator"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="2dp"
+            android:paddingRight="2dp">
+
+            <ImageView
+                android:id="@+id/set_sex_iv"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:scaleType="fitXY" />
+
+            <TextView
+                android:id="@+id/set_sex_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_set_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/iv_set_avator"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="8dp"
+            android:singleLine="true"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/tv_set_nick"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_set_name"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="8dp"
+            android:singleLine="true"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold|italic" />
+
+        <TextView
+            android:id="@+id/tv_set_city"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_set_nick"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="8dp"
+            android:singleLine="true"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold|italic" />
+    </RelativeLayout>
+
+
+    <Button
+        android:id="@+id/btn_add_friend"
+        style="@style/Smile.Button.theme"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginLeft="@dimen/activity_vertical_margin"
+        android:layout_marginRight="@dimen/activity_vertical_margin"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:text="@string/add_friend"
+        android:visibility="gone" />
+
+    <Button
+        android:id="@+id/btn_chat"
+        style="@style/Smile.Button.theme"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginLeft="@dimen/activity_vertical_margin"
+        android:layout_marginRight="@dimen/activity_vertical_margin"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:text="@string/chat" />
+
+    <Button
+        android:id="@+id/btn_black"
+        style="@style/Smile.Button.logout"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginLeft="@dimen/activity_vertical_margin"
+        android:layout_marginRight="@dimen/activity_vertical_margin"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:text="@string/blacklist" />
+
+    <RelativeLayout
+        android:id="@+id/layout_black_tips"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:padding="10dp"
+        android:visibility="gone">
+
+        <TextView
+            style="@style/Smile.TextView._Black"
+            android:layout_centerInParent="true"
+            android:text="@string/black_tips"
+            android:textSize="14sp" />
+    </RelativeLayout>
+</LinearLayout>

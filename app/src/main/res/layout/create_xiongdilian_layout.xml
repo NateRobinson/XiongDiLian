@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include layout="@layout/toolbar_layout" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.5"
+        android:gravity="center_horizontal|bottom">
+
+        <ImageView
+            android:id="@+id/xiongdilian_head_iv"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginBottom="@dimen/bottom_margin_big_10dp"
+            android:scaleType="centerCrop" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginLeft="@dimen/left_margin_normal_8dp"
+        android:layout_marginRight="@dimen/right_margin_normal_8dp"
+        android:background="@color/divider" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="@dimen/margin_normal_8dp"
+        android:layout_weight="1.0"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/xiongdilian_title_et"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/et_height_normal_40dp"
+            android:background="@drawable/create_xiongdilian_edit_bg"
+            android:gravity="center_vertical"
+            android:hint="@string/create_xiongdilian_title_et_hint"
+            android:maxLength="8"
+            android:paddingLeft="@dimen/left_padding_normal_4dp"
+            android:paddingRight="@dimen/right_padding_normal_4dp"
+            android:singleLine="true"
+            android:textColor="@color/secondary_text"
+            android:textColorHint="@color/secondary_text"
+            android:textSize="@dimen/text_font_size_title_16sp" />
+
+        <EditText
+            android:id="@+id/xiongdilian_desc_et"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/top_margin_normal_8dp"
+            android:background="@drawable/create_xiongdilian_edit_bg"
+            android:gravity="top|left"
+            android:hint="@string/create_xiongdilian_desc_et_hint"
+            android:lines="5"
+            android:maxLength="200"
+            android:paddingLeft="@dimen/left_padding_normal_4dp"
+            android:paddingRight="@dimen/right_padding_normal_4dp"
+            android:paddingTop="@dimen/top_padding_normal_4dp"
+            android:textColor="@color/secondary_text"
+            android:textColorHint="@color/secondary_text"
+            android:textSize="@dimen/text_font_size_title_16sp" />
+
+        <Button
+            android:id="@+id/create_xiongdilian_btn"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/button_height_normal_48dp"
+            android:layout_marginTop="@dimen/top_margin_normal_8dp"
+            android:background="@drawable/do_create_xiongdilian_btn_bg"
+            android:gravity="center"
+            android:text="@string/create_xionglian_btn_text"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_font_size_title_18sp" />
+    </LinearLayout>
+
+</LinearLayout>

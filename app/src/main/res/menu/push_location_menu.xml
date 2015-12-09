@@ -1,0 +1,11 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/publish_location_menu"
+        android:icon="@mipmap/publish_normal"
+        android:orderInCategory="100"
+        android:title="@string/send"
+        app:showAsAction="always" />
+
+</menu>

@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/divider2"
+    android:orientation="vertical">
+
+    <View
+        android:id="@+id/during_line"
+        android:layout_width="match_parent"
+        android:layout_height="8dp"
+        android:background="@color/divider2"
+        android:focusable="false" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/left_margin_normal_8dp"
+        android:layout_marginRight="@dimen/right_margin_normal_8dp"
+        android:background="@drawable/one_post_comment_ll_bg"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/xiongdilian_item_ll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/left_padding_big_8dp"
+            android:paddingRight="@dimen/right_padding_big_8dp"
+            android:paddingTop="@dimen/top_padding_big_8dp">
+
+            <ImageView
+                android:id="@+id/comment_man_headimg"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:scaleType="centerCrop" />
+
+            <TextView
+                android:id="@+id/comment_man_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/comment_man_headimg"
+                android:layout_marginLeft="@dimen/left_margin_normal_8dp"
+                android:layout_toRightOf="@id/comment_man_headimg"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:maxEms="8"
+                android:singleLine="true"
+                android:textColor="@color/primary_text"
+                android:textSize="@dimen/text_font_size_title_16sp" />
+
+            <TextView
+                android:id="@+id/comment_turn_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/comment_man_headimg"
+                android:layout_below="@id/comment_man_name"
+                android:layout_marginLeft="@dimen/left_margin_normal_8dp"
+                android:layout_toRightOf="@id/comment_man_headimg"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:singleLine="true"
+                android:textColor="@color/secondary_text"
+                android:textSize="@dimen/text_font_size_content_14sp" />
+
+            <TextView
+                android:id="@+id/comment_create_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/comment_man_headimg"
+                android:layout_below="@id/comment_man_name"
+                android:layout_marginLeft="@dimen/left_margin_normal_8dp"
+                android:layout_toRightOf="@id/comment_turn_num"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:singleLine="true"
+                android:textColor="@color/secondary_text"
+                android:textSize="@dimen/text_font_size_content_14sp" />
+
+            <ImageView
+                android:id="@+id/add_post_comment_iv"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/post_comment_btn_bg"
+                android:contentDescription="@string/post_comment_btn_bg"
+                android:visibility="invisible" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp">
+
+            <com.gu.baselibrary.view.MTextView xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/main_comment_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/text_font_size_content_14sp"
+                app:textColor="@color/primary_text" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

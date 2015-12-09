@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/public_cityhot_item"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <TextView
+        android:id="@+id/alpha"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/city_list_margin_left_dimen"
+        android:layout_marginTop="15.0dip"
+        android:gravity="center_vertical"
+        android:text="A"
+        android:textAppearance="?android:textAppearanceMedium"
+        android:textColor="@color/city_item_letter_color"
+        android:textSize="@dimen/city_list_text_size"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:id="@+id/ListBackground"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/city_list_item_height"
+        android:layout_below="@id/alpha"
+        android:background="@drawable/city_item_bg"
+        android:paddingLeft="@dimen/city_list_margin_left_dimen"
+        android:paddingRight="@dimen/city_list_margin_right_dimen">
+
+        <TextView
+            android:id="@+id/public_cityhot_item_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="false"
+            android:layout_centerVertical="true"
+            android:text="北京"
+            android:textColor="@color/city_item_text_color"
+            android:textSize="@dimen/city_list_text_size" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1.0px"
+            android:layout_alignParentBottom="true"
+            android:background="@color/city_item_divider_color" />
+    </RelativeLayout>
+</RelativeLayout>

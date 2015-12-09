@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="first_page_margin_top">110.0dip</dimen>
+    <dimen name="margin_top">50.0dip</dimen>
+    <dimen name="name_size">19.0dip</dimen>
+    <dimen name="word_size">15.0dip</dimen>
+    <dimen name="word_margin_top">4.0dip</dimen>
+    <dimen name="margin_left">100.0dip</dimen>
+    <dimen name="word_margin_left">100.0dip</dimen>
+
+    <!-- 一些常用的间距字体大小配置-->
+    <!-- 字体大小-->
+    <dimen name="text_font_size_big_24sp">24sp</dimen>
+    <dimen name="text_font_size_title_18sp">18sp</dimen>
+    <dimen name="text_font_size_title_16sp">16sp</dimen>
+    <dimen name="text_font_size_content_14sp">14sp</dimen>
+    <dimen name="text_font_size_small_12sp">12sp</dimen>
+    <dimen name="text_font_size_smaller_10sp">10sp</dimen>
+
+    <!-- 边距设置-->
+    <dimen name="left_margin_big_10dp">10dp</dimen>
+    <dimen name="left_margin_normal_8dp">8dp</dimen>
+    <dimen name="right_margin_big_10dp">10dp</dimen>
+    <dimen name="right_margin_normal_8dp">8dp</dimen>
+    <dimen name="top_margin_big_10dp">10dp</dimen>
+    <dimen name="top_margin_normal_8dp">8dp</dimen>
+    <dimen name="bottom_margin_big_10dp">10dp</dimen>
+    <dimen name="bottom_margin_normal_8dp">8dp</dimen>
+    <dimen name="margin_normal_8dp">8dp</dimen>
+
+    <dimen name="left_padding_big_8dp">8dp</dimen>
+    <dimen name="left_padding_normal_4dp">4dp</dimen>
+    <dimen name="right_padding_big_8dp">8dp</dimen>
+    <dimen name="right_padding_normal_4dp">4dp</dimen>
+    <dimen name="top_padding_big_8dp">8dp</dimen>
+    <dimen name="top_padding_normal_4dp">4dp</dimen>
+    <dimen name="bottom_padding_big_8dp">8dp</dimen>
+    <dimen name="bottom_padding_normal_4dp">4dp</dimen>
+    <dimen name="padding_big_8dp">8dp</dimen>
+
+    <!-- 按钮高度-->
+    <dimen name="button_height_normal_48dp">48dp</dimen>
+    <dimen name="button_height_small_28dp">28dp</dimen>
+
+    <!-- 布局高度-->
+    <dimen name="ll_height_normal_48dp">48dp</dimen>
+    <dimen name="ll_height_normal_40dp">40dp</dimen>
+
+    <!--输入框高度-->
+    <dimen name="et_height_normal_40dp">40dp</dimen>
+
+    <!-- 加入聊天 -->
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="text_size_small">14sp</dimen>
+    <dimen name="text_size_medium">16sp</dimen>
+    <dimen name="text_size_large">18sp</dimen>
+    <dimen name="base_action_bar_height">48.0dip</dimen>
+    <dimen name="base_action_bar_title_size">22.0sp</dimen>
+    <dimen name="register_margin">10.0dp</dimen>
+    <dimen name="base_scrollview_top_height">50.0dip</dimen>
+    <dimen name="tab_padding_top_bottom">15dp</dimen>
+    <dimen name="tab_padding_left_right">40dp</dimen>
+    <dimen name="tab_height">48dp</dimen>
+    <dimen name="base_line_width_1">1dip</dimen>
+    <dimen name="base_line_width_2">2dip</dimen>
+    <dimen name="base_line_width">0.5dip</dimen>
+
+    <dimen name="time_line_line_left_margin">24dip</dimen>
+    <dimen name="time_line_line_width">2.0dip</dimen>
+    <dimen name="time_line_content_left_margin">52.0dip</dimen>
+    <dimen name="time_line_content_right_margin">7.0dip</dimen>
+
+    <dimen name="score_item_height">100.0dip</dimen>
+    <dimen name="message_top_height">70.0dip</dimen>
+
+    <dimen name="margin_chat_top">5.0dip</dimen>
+    <dimen name="city_list_text_size">14sp</dimen>
+    <dimen name="city_letter_size">12.0dip</dimen>
+    <dimen name="city_list_margin_left_dimen">20.0dip</dimen>
+    <dimen name="city_list_margin_right_dimen">40.0dip</dimen>
+    <dimen name="city_list_item_height">44.0dip</dimen>
+    <dimen name="city_hot_margin_bottom">10.0dip</dimen>
+    <dimen name="city_hot_margin_top">20.0dip</dimen>
+
+</resources>

@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/divider2"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_normal_8dp"
+        android:background="@drawable/one_xiongdilian_ll_normal_bg"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="@dimen/padding_big_8dp">
+
+        <ImageView
+            android:id="@+id/one_xiongdilian_headimg"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:scaleType="centerCrop" />
+
+        <TextView
+            android:id="@+id/one_xiongdilian_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/one_xiongdilian_headimg"
+            android:layout_marginLeft="@dimen/left_margin_normal_8dp"
+            android:layout_toRightOf="@id/one_xiongdilian_headimg"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:singleLine="true"
+            android:textColor="@color/primary_text"
+            android:textSize="@dimen/text_font_size_title_16sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/join_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/button_height_small_28dp"
+            android:layout_alignBottom="@id/one_xiongdilian_headimg"
+            android:layout_marginLeft="@dimen/left_margin_normal_8dp"
+            android:layout_toRightOf="@id/one_xiongdilian_headimg"
+            android:background="@drawable/do_create_xiongdilian_btn_bg"
+            android:text="@string/join_xiongdilian"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_font_size_content_14sp"
+            android:visibility="invisible" />
+
+        <LinearLayout
+            android:id="@+id/one_xiongdilian_people_ll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/join_btn"
+            android:layout_below="@id/one_xiongdilian_name"
+            android:layout_marginLeft="@dimen/left_margin_normal_8dp"
+            android:layout_toRightOf="@id/one_xiongdilian_headimg"
+            android:background="@drawable/one_xiongdilian_people_bg"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:contentDescription="@string/my_xiongdilian_people1"
+                android:src="@mipmap/people1" />
+
+            <TextView
+                android:id="@+id/one_people_num_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/left_margin_normal_8dp"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:singleLine="true"
+                android:textColor="@color/secondary_text"
+                android:textSize="@dimen/text_font_size_small_12sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/one_xiongdilian_post_ll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/join_btn"
+            android:layout_below="@id/one_xiongdilian_name"
+            android:layout_marginLeft="@dimen/left_margin_normal_8dp"
+            android:layout_toRightOf="@id/one_xiongdilian_people_ll"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_marginLeft="@dimen/left_margin_normal_8dp"
+                android:contentDescription="@string/my_xiongdilian_post1"
+                android:src="@mipmap/post1" />
+
+            <TextView
+                android:id="@+id/one_post_num_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/left_margin_normal_8dp"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:singleLine="true"
+                android:textColor="@color/secondary_text"
+                android:textSize="@dimen/text_font_size_small_12sp" />
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@id/one_xiongdilian_headimg"
+            android:contentDescription="@string/hot"
+            android:src="@mipmap/hot" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:background="@drawable/one_xiongdilian_ll_normal_bg">
+
+        <com.gu.baselibrary.view.MTextView
+            android:id="@+id/one_xiongdilian_desc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/padding_big_8dp"
+            android:textSize="@dimen/text_font_size_content_14sp"
+            app:textColor="@color/secondary_text" />
+    </LinearLayout>
+
+</LinearLayout>

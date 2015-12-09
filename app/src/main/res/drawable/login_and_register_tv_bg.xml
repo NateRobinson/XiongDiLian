@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- 登录注册字体选中颜色 -->
+    <item android:state_selected="true" android:color="#FFFFFF"></item>
+    <!-- 登录注册字体未选中颜色 -->
+    <item android:state_selected="false" android:color="#0097A7"></item>
+
+</selector>

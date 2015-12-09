@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Loading_dialog样式Start-->
+    <style name="Dialog_bocop">
+        <item name="android:windowBackground">@color/bocop_dialog_bg</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+    </style>
+
+    <!-- Loading dialog动画-->
+    <style name="FadeIn">
+        <item name="android:activityOpenEnterAnimation">@anim/fade_in</item>
+    </style>
+</resources>

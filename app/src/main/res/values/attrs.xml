@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- ToolBar TextSize Setting-->
+    <attr name="toolbar_title_size" format="dimension" />
+    <!-- ToolBar TextColor Setting-->
+    <attr name="toolbar_background" format="color" />
+    <!-- RegisterAndLogin Background Color-->
+    <attr name="register_and_login_bg" format="color" />
+    <!-- LoginBtn Background-->
+    <attr name="login_btn_select_bg" format="reference" />
+    <!-- RegisterBtn Background-->
+    <attr name="register_btn_select_bg" format="reference" />
+    <!-- login_and_register_tv_bg-->
+    <attr name="login_and_register_tv_bg" format="reference" />
+    <!-- login_register_edit_bg-->
+    <attr name="login_register_edit_bg" format="reference" />
+    <!-- do_login_and_register_btn_bg-->
+    <attr name="do_login_and_register_btn_bg" format="reference" />
+
+</resources>

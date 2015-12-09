@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <LinearLayout
+        android:id="@+id/city_home_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include layout="@layout/toolbar_layout" />
+
+        <include
+            android:id="@+id/home_edittext_layout"
+            layout="@layout/public_cityhot_header_searchview" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ListView
+                android:id="@+id/public_allcity_list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="0.0dip"
+                android:background="@color/city_search_bg"
+                android:cacheColorHint="@android:color/transparent"
+                android:divider="@null"
+                android:listSelector="@android:color/transparent" />
+
+            <com.gu.xiongdilian.view.citylist.MyLetterListView
+                android:id="@+id/cityLetterListView"
+                android:layout_width="40dip"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:background="#00000000" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/overlay_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="#ffffff"
+        android:gravity="center"
+        android:maxWidth="80dip"
+        android:minWidth="80dip"
+        android:padding="5dip"
+        android:textColor="#3399ff"
+        android:textSize="70sp"
+        android:visibility="invisible" />
+
+</RelativeLayout>

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/divider2"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/one_xiongdilian_post_item_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_normal_8dp"
+        android:background="@drawable/post_detail_head_ll_bg"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="@dimen/padding_big_8dp">
+
+            <ImageView
+                android:id="@+id/post_man_head_iv"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_centerVertical="true"
+                android:scaleType="centerCrop" />
+
+            <TextView
+                android:id="@+id/post_author_name_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/post_man_head_iv"
+                android:layout_marginLeft="8dp"
+                android:layout_toRightOf="@id/post_man_head_iv"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:textColor="@color/primary_text"
+                android:textSize="@dimen/text_font_size_title_16sp" />
+
+            <TextView
+                android:id="@+id/post_create_time_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/post_man_head_iv"
+                android:layout_below="@id/post_author_name_tv"
+                android:layout_marginLeft="@dimen/left_margin_normal_8dp"
+                android:layout_toRightOf="@id/post_man_head_iv"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:singleLine="true"
+                android:textColor="@color/secondary_text"
+                android:textSize="@dimen/text_font_size_content_14sp" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/post_title_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/left_margin_normal_8dp"
+            android:layout_marginRight="@dimen/right_margin_normal_8dp"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:textColor="@color/primary_text"
+            android:textSize="@dimen/text_font_size_title_16sp" />
+
+        <com.gu.baselibrary.view.MTextView
+            android:id="@+id/post_content_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/left_margin_normal_8dp"
+            android:layout_marginRight="@dimen/right_margin_normal_8dp"
+            android:ellipsize="end"
+            android:maxLines="4"
+            android:textSize="@dimen/text_font_size_content_14sp"
+            app:textColor="@color/secondary_text" />
+
+        <LinearLayout
+            android:id="@+id/post_img_ll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/left_margin_normal_8dp"
+            android:layout_marginRight="@dimen/right_margin_normal_8dp"
+            android:layout_marginTop="@dimen/top_margin_normal_8dp"
+            android:orientation="vertical"></LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>
