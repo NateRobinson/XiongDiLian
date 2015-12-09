@@ -1,5 +1,6 @@
 package com.gu.xiongdilian.activity.picstory;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -9,6 +10,7 @@ import com.gu.baselibrary.utils.NetUtils;
 import com.gu.xiongdilian.R;
 import com.gu.xiongdilian.adapter.picstory.PicStoryAdapter;
 import com.gu.xiongdilian.base.XDLBaseWithCheckLoginActivity;
+import com.gu.xiongdilian.pojo.Account;
 import com.gu.xiongdilian.pojo.PicStory;
 import com.gu.xiongdilian.view.XListView;
 import com.nostra13.universalimageloader.core.ImageLoader;
@@ -19,6 +21,7 @@ import java.util.List;
 
 import butterknife.InjectView;
 import cn.bmob.v3.BmobQuery;
+import cn.bmob.v3.BmobUser;
 import cn.bmob.v3.listener.FindListener;
 
 /**
@@ -27,6 +30,7 @@ import cn.bmob.v3.listener.FindListener;
 public class PicStoryMainActivity extends XDLBaseWithCheckLoginActivity implements XListView.IXListViewListener {
     private static final int STATE_REFRESH = 0;// 下拉刷新
     private static final int STATE_MORE = 1;// 加载更多
+    private static final int GO_TO_CREATE_PIC_STORY_CODE = 2;
     @InjectView(R.id.pic_story_main_list)
     XListView picStoryMainList;
     @InjectView(R.id.list_empty_ll)
@@ -140,7 +144,7 @@ public class PicStoryMainActivity extends XDLBaseWithCheckLoginActivity implemen
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         if (item.getItemId() == R.id.add_pic_story_menu) {
-            go(MakePicStoryActivity.class);
+            goForResult(MakePicStoryActivity.class, GO_TO_CREATE_PIC_STORY_CODE);
             return true;
         }
         return super.onOptionsItemSelected(item);
@@ -161,6 +165,9 @@ public class PicStoryMainActivity extends XDLBaseWithCheckLoginActivity implemen
      * 分页获取数据
      */
     private void queryData(final int actionType) {
+        if (actionType == STATE_REFRESH) {
+            currentPage = 0;
+        }
         BmobQuery<PicStory> query = new BmobQuery<>();
         query.setLimit(pageSize); // 设置每页多少条数据
         query.setSkip(currentPage * pageSize); // 从第几条数据开始，
@@ -205,4 +212,13 @@ public class PicStoryMainActivity extends XDLBaseWithCheckLoginActivity implemen
         });
     }
 
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        if (requestCode == GO_TO_CREATE_PIC_STORY_CODE) {
+            if (resultCode == RESULT_OK) {
+                queryData(STATE_REFRESH);
+            }
+        }
+
+    }
 }

@@ -227,6 +227,8 @@ public class MakePicStoryActivity extends XDLBaseWithCheckLoginActivity {
             @Override
             public void onSuccess() {
                 dismissLoadingDialog();
+                Intent mIntent = new Intent();
+                setResult(RESULT_OK, mIntent);
                 finish();
             }
 

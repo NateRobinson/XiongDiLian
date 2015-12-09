@@ -208,9 +208,14 @@
         <activity
             android:name="me.nereo.multi_image_selector.MultiImageSelectorActivity"
             android:screenOrientation="portrait" />
+        <!--公司电脑-->
+        <!--<meta-data-->
+            <!--android:name="com.baidu.lbsapi.API_KEY"-->
+            <!--android:value="oAhfhMkwO1gWujuITuT2lEOP" />-->
+        <!--家中电脑-->
         <meta-data
             android:name="com.baidu.lbsapi.API_KEY"
-            android:value="oAhfhMkwO1gWujuITuT2lEOP" />
+            android:value="MkUXcmlrGUbqMy9Q5TohL0BK" />
 
         <service
             android:name="com.baidu.location.f"
