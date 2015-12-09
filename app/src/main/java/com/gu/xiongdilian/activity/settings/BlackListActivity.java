@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
+import android.widget.LinearLayout;
 import android.widget.ListView;
 
 import com.flyco.animation.FadeExit.FadeExit;
@@ -32,7 +33,8 @@ import cn.bmob.v3.listener.UpdateListener;
 public class BlackListActivity extends XDLBaseWithCheckLoginActivity implements OnItemClickListener {
     @InjectView(R.id.list_blacklist)
     ListView listview;
-
+    @InjectView(R.id.list_empty_ll)
+    LinearLayout list_empty_ll;
     private BlackListAdapter adapter;
 
     /**
@@ -100,6 +102,7 @@ public class BlackListActivity extends XDLBaseWithCheckLoginActivity implements 
         adapter = new BlackListAdapter(this, R.layout.item_blacklist, BmobDB.create(this).getBlackList());
         listview.setAdapter(adapter);
         listview.setOnItemClickListener(this);
+        listview.setEmptyView(list_empty_ll);
     }
 
     /**

@@ -63,9 +63,9 @@
     <dimen name="tab_padding_top_bottom">15dp</dimen>
     <dimen name="tab_padding_left_right">40dp</dimen>
     <dimen name="tab_height">48dp</dimen>
-    <dimen name="base_line_width_1">1dip</dimen>
-    <dimen name="base_line_width_2">2dip</dimen>
-    <dimen name="base_line_width">0.5dip</dimen>
+    <dimen name="base_line_width_1">1px</dimen>
+    <dimen name="base_line_width_2">2px</dimen>
+    <dimen name="base_line_width">0.5px</dimen>
 
     <dimen name="time_line_line_left_margin">24dip</dimen>
     <dimen name="time_line_line_width">2.0dip</dimen>

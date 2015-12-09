@@ -194,7 +194,7 @@ public class SetMyInfoActivity extends XDLBaseWithCheckLoginActivity {
     public void onResume() {
         super.onResume();
         if (from.equals("me")) {
-            initMeData();
+            initOtherData(userManager.getCurrentUser(Account.class).getUsername());
         }
     }
 
@@ -322,14 +322,6 @@ public class SetMyInfoActivity extends XDLBaseWithCheckLoginActivity {
     }
 
     /**
-     * 加载自己的资料
-     */
-    private void initMeData() {
-        Account account = userManager.getCurrentUser(Account.class);
-        initOtherData(account.getUsername());
-    }
-
-    /**
      * 根据name查询其他人的用户资料
      *
      * @param name
@@ -447,19 +439,19 @@ public class SetMyInfoActivity extends XDLBaseWithCheckLoginActivity {
      * @param which
      */
     private void updateInfo(int which) {
-        final Account account = userManager.getCurrentUser(Account.class);
+        Account updateSex = new Account();
+        updateSex.setObjectId(userManager.getCurrentUser(Account.class).getObjectId());
         if (which == 0) {
-            account.setSex(true);
+            updateSex.setSex(true);
         } else {
-            account.setSex(false);
+            updateSex.setSex(false);
         }
-        account.update(this, new UpdateListener() {
+        updateSex.update(this, new UpdateListener() {
 
             @Override
             public void onSuccess() {
                 showToast(R.string.modify_self_data_success);
-                final Account u = userManager.getCurrentUser(Account.class);
-                boolean sex = u.isSex();
+                boolean sex = userManager.getCurrentUser(Account.class).isSex();
                 set_sex_name.setText(sex ? getString(R.string.man) : getString(R.string.woman));
                 set_sex_iv.setBackgroundResource(sex ? R.mipmap.sex_nan_white : R.mipmap.sex_nv_white);
                 set_set_ll.setBackgroundResource(sex ? R.drawable.self_data_set_ll_bg_nan : R.drawable.self_data_set_ll_bg_nv);

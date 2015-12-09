@@ -7,139 +7,147 @@
 
     <include layout="@layout/toolbar_layout" />
 
-    <RelativeLayout
-        android:id="@+id/layout_info"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="48dp"
-        android:background="@drawable/btn_selector"
-        android:minHeight="50dp"
-        android:padding="10dp">
+        android:layout_height="wrap_content">
 
-        <TextView
-            style="@style/Setting.TextView"
-            android:layout_alignParentLeft="true"
-            android:layout_centerVertical="true"
-            android:text="@string/set_myinfo" />
-
-        <TextView
-            style="@style/Setting.TextView"
-            android:layout_alignParentRight="true"
-            android:layout_centerVertical="true"
-            android:layout_marginRight="10dp"
-            android:drawablePadding="10dp"
-            android:drawableRight="@mipmap/forward_arrow" />
-    </RelativeLayout>
-
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/base_line_width_1"
-        android:background="@color/divider2"></View>
-
-    <RelativeLayout
-        android:id="@+id/layout_blacklist"
-        android:layout_width="match_parent"
-        android:layout_height="48dp"
-        android:background="@drawable/btn_selector"
-        android:minHeight="50dp"
-        android:padding="10dp">
-
-        <TextView
-            style="@style/Setting.TextView"
-            android:layout_alignParentLeft="true"
-            android:layout_centerVertical="true"
-            android:text="@string/set_blacklist" />
-
-        <TextView
-            style="@style/Setting.TextView"
-            android:layout_alignParentRight="true"
-            android:layout_centerVertical="true"
-            android:layout_marginRight="10dp"
-            android:drawablePadding="10dp"
-            android:drawableRight="@mipmap/forward_arrow" />
-    </RelativeLayout>
-
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/base_line_width_1"
-        android:background="@color/divider2"></View>
-
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="48dp">
-
-        <TextView
-            style="@style/Setting.TextView"
-            android:layout_centerVertical="true"
-            android:layout_marginLeft="10dp"
-            android:text="@string/set_notify" />
-
-        <com.kyleduo.switchbutton.SwitchButton
-            android:id="@+id/sb_notification"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:layout_centerVertical="true"
-            android:layout_marginRight="10dp" />
-    </RelativeLayout>
+            android:orientation="vertical">
 
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/base_line_width_1"
-        android:background="@color/divider2"></View>
+            <LinearLayout
+                android:id="@+id/layout_info"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/ll_height_normal_48dp"
+                android:background="@drawable/btn_selector"
+                android:gravity="center_vertical">
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="48dp">
+                <TextView
+                    style="@style/Setting.TextView"
+                    android:layout_marginLeft="@dimen/left_margin_big_10dp"
+                    android:text="@string/set_myinfo" />
 
-        <TextView
-            style="@style/Setting.TextView"
-            android:layout_centerVertical="true"
-            android:layout_marginLeft="10dp"
-            android:text="@string/set_voice" />
+                <ImageView
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:layout_marginRight="@dimen/right_margin_big_10dp"
+                    android:src="@mipmap/forward_arrow" />
+            </LinearLayout>
 
-        <com.kyleduo.switchbutton.SwitchButton
-            android:id="@+id/sb_voice"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:layout_centerVertical="true"
-            android:layout_marginRight="10dp" />
-    </RelativeLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/base_line_width_1"
+                android:background="@color/divider2"></View>
 
-    <View
-        android:id="@+id/view1"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/base_line_width_1"
-        android:background="@color/divider2"></View>
+            <LinearLayout
+                android:id="@+id/layout_blacklist"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@drawable/btn_selector"
+                android:gravity="center_vertical">
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="48dp">
+                <TextView
+                    style="@style/Setting.TextView"
+                    android:layout_marginLeft="@dimen/left_margin_big_10dp"
+                    android:text="@string/set_blacklist" />
 
-        <TextView
-            style="@style/Setting.TextView"
-            android:layout_centerVertical="true"
-            android:layout_marginLeft="10dp"
-            android:text="@string/set_vibrate" />
+                <ImageView
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:layout_marginRight="@dimen/right_margin_big_10dp"
+                    android:src="@mipmap/forward_arrow" />
+            </LinearLayout>
 
-        <com.kyleduo.switchbutton.SwitchButton
-            android:id="@+id/sb_vibrate"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:layout_centerVertical="true"
-            android:layout_marginRight="10dp" />
-    </RelativeLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/base_line_width_1"
+                android:background="@color/divider2"></View>
 
-    <View
-        android:id="@+id/view2"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/base_line_width_1"
-        android:background="@color/divider2"></View>
 
-    <Button
-        android:id="@+id/btn_logout"
-        style="@style/Setting.ButtonLogout"
-        android:layout_margin="@dimen/activity_vertical_margin"
-        android:text="@string/logout" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@drawable/btn_selector"
+                android:gravity="center_vertical">
+
+                <TextView
+                    style="@style/Setting.TextView"
+                    android:layout_marginLeft="@dimen/left_margin_big_10dp"
+                    android:text="@string/set_notify" />
+
+                <com.kyleduo.switchbutton.SwitchButton
+                    android:id="@+id/sb_notification"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/right_margin_big_10dp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/base_line_width_1"
+                android:background="@color/divider2"></View>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@drawable/btn_selector"
+                android:gravity="center_vertical">
+
+                <TextView
+                    style="@style/Setting.TextView"
+                    android:layout_marginLeft="@dimen/left_margin_big_10dp"
+                    android:text="@string/set_voice" />
+
+                <com.kyleduo.switchbutton.SwitchButton
+                    android:id="@+id/sb_voice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/right_margin_big_10dp" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/view1"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/base_line_width_1"
+                android:background="@color/divider2"></View>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@drawable/btn_selector"
+                android:gravity="center_vertical">
+
+                <TextView
+                    style="@style/Setting.TextView"
+                    android:layout_marginLeft="@dimen/left_margin_big_10dp"
+                    android:text="@string/set_vibrate" />
+
+                <com.kyleduo.switchbutton.SwitchButton
+                    android:id="@+id/sb_vibrate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/right_margin_big_10dp" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/view2"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/base_line_width_1"
+                android:background="@color/divider2"></View>
+
+            <Button
+                android:id="@+id/btn_logout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/button_height_normal_48dp"
+                android:layout_marginLeft="@dimen/left_margin_big_10dp"
+                android:layout_marginRight="@dimen/right_margin_big_10dp"
+                android:layout_marginTop="@dimen/top_margin_normal_8dp"
+                android:background="@drawable/btn_logout_selector"
+                android:text="@string/logout"
+                android:textColor="@color/base_color_text_white"
+                android:textSize="@dimen/text_font_size_title_18sp" />
+        </LinearLayout>
+    </ScrollView>
+
 </LinearLayout>

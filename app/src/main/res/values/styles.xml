@@ -196,24 +196,16 @@
         <item name="@android:windowExitAnimation">@anim/shrink_from_top</item>
     </style>
 
-
     <!-- Setting page-->
     <style name="Setting">
-        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_weight">1</item>
         <item name="android:layout_height">wrap_content</item>
-    </style>
-
-    <style name="Setting.ButtonLogout">
-        <item name="android:textSize">24sp</item>
-        <item name="android:textColor">@color/base_color_text_white</item>
-        <item name="android:layout_width">match_parent</item>
-        <item name="android:layout_height">@dimen/base_action_bar_height</item>
-        <item name="android:background">@drawable/btn_logout_selector</item>
     </style>
 
     <style name="Setting.TextView">
         <item name="android:textSize">18sp</item>
-        <item name="android:textColor">@color/black</item>
+        <item name="android:textColor">@color/primary_text</item>
     </style>
 
 </resources>
