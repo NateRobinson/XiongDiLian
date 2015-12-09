@@ -217,14 +217,14 @@
             android:name="com.baidu.lbsapi.API_KEY"
             android:value="MkUXcmlrGUbqMy9Q5TohL0BK" />
 
-        <service
-            android:name="com.baidu.location.f"
-            android:enabled="true"
-            android:process=":remote">
-            <intent-filter>
-                <action android:name="com.baidu.location.service_v2.2"></action>
-            </intent-filter>
-        </service>
+        <!--<service-->
+            <!--android:name="com.baidu.location.f"-->
+            <!--android:enabled="true"-->
+            <!--android:process=":remote">-->
+            <!--<intent-filter>-->
+                <!--<action android:name="com.baidu.location.service_v2.2"></action>-->
+            <!--</intent-filter>-->
+        <!--</service>-->
 
         <!-- IM聊天所需的Push start -->
         <service
