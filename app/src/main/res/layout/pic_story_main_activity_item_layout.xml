@@ -64,8 +64,7 @@
         android:layout_marginBottom="@dimen/bottom_margin_big_10dp"
         android:layout_marginLeft="@dimen/left_margin_big_10dp"
         android:layout_marginRight="@dimen/right_margin_big_10dp"
-        android:scaleType="centerCrop"
-        android:src="@mipmap/test" />
+        android:scaleType="centerCrop" />
 
     <!--<View-->
     <!--android:layout_width="match_parent"-->
