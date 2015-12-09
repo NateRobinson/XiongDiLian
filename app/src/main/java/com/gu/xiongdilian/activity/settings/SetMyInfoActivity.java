@@ -420,9 +420,7 @@ public class SetMyInfoActivity extends XDLBaseWithCheckLoginActivity {
         testItems.add(new DialogMenuItem(getString(R.string.woman), R.mipmap.iconfont_nv));
         final NormalListDialog normalListDialog = new NormalListDialog(this, testItems);
         normalListDialog.title(getString(R.string.please_select_sex))//
-                .titleBgColor(Color.parseColor("#00BCD4"))//
-                .showAnim(new FlipVerticalSwingEnter())//
-                .dismissAnim(new FadeExit());
+                .titleBgColor(Color.parseColor("#00BCD4"));
         normalListDialog.setOnOperItemClickL(new OnOperItemClickL() {
             @Override
             public void onOperItemClick(AdapterView<?> parent, View view, int position, long id) {
