@@ -2,9 +2,10 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item
-        android:id="@+id/add_xiongdilian_menu"
+        android:id="@+id/add_pic_story_menu"
         android:icon="@drawable/ic_menu_btn_add"
         android:orderInCategory="100"
         android:title="@string/add"
         app:showAsAction="always" />
+
 </menu>

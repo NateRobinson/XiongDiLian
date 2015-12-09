@@ -42,13 +42,13 @@ public class MakePicStoryActivity extends XDLBaseWithCheckLoginActivity {
     private static final int SELECT_IMAGE_CODE = 1;
 
     @InjectView(R.id.pic_img)
-    private ImageView mPicImg;
+    ImageView mPicImg;
 
     @InjectView(R.id.add_pic_story_tv)
-    private TextView mAddPicStoryTv;
+    TextView mAddPicStoryTv;
 
     @InjectView(R.id.add_pic_story_desc_et)
-    private EditText mAddPicStoryDescEt;
+    EditText mAddPicStoryDescEt;
 
     private String picUrl = null;
 
@@ -101,7 +101,7 @@ public class MakePicStoryActivity extends XDLBaseWithCheckLoginActivity {
      */
     @Override
     protected boolean isCustomPendingTransition() {
-        return false;
+        return true;
     }
 
     /**
@@ -109,7 +109,7 @@ public class MakePicStoryActivity extends XDLBaseWithCheckLoginActivity {
      */
     @Override
     protected TransitionMode getCustomPendingTransitionType() {
-        return null;
+        return TransitionMode.FADE;
     }
 
     /**
@@ -142,7 +142,7 @@ public class MakePicStoryActivity extends XDLBaseWithCheckLoginActivity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.make_xiongdilian_post_main, menu);
+        getMenuInflater().inflate(R.menu.make_pic_story_menu, menu);
         return super.onCreateOptionsMenu(menu);
     }
 
@@ -171,11 +171,10 @@ public class MakePicStoryActivity extends XDLBaseWithCheckLoginActivity {
             case R.id.add_pic_story_tv:
                 Intent intent = new Intent(this, MultiImageSelectorActivity.class);
                 // 是否显示调用相机拍照
-                intent.putExtra(MultiImageSelectorActivity.EXTRA_SHOW_CAMERA, false);
+                intent.putExtra(MultiImageSelectorActivity.EXTRA_SHOW_CAMERA, true);
                 // 设置模式 (支持 单选/MultiImageSelectorActivity.MODE_SINGLE 或者 多选/MultiImageSelectorActivity.MODE_MULTI)
-                intent.putExtra(MultiImageSelectorActivity.EXTRA_SELECT_MODE, MultiImageSelectorActivity.MODE_MULTI);
+                intent.putExtra(MultiImageSelectorActivity.EXTRA_SELECT_MODE, MultiImageSelectorActivity.MODE_SINGLE);
                 startActivityForResult(intent, SELECT_IMAGE_CODE);
-
                 break;
 
             default:
@@ -221,8 +220,10 @@ public class MakePicStoryActivity extends XDLBaseWithCheckLoginActivity {
      * 增长图片故事数量
      */
     private void incrementAccountPicStoryNum() {
-        account.increment("picStoryNum");
-        account.update(this, new UpdateListener() {
+        Account increamentAccount = new Account();
+        increamentAccount.setObjectId(account.getObjectId());
+        increamentAccount.increment("picStoryNum");
+        increamentAccount.update(this, new UpdateListener() {
             @Override
             public void onSuccess() {
                 dismissLoadingDialog();

@@ -19,6 +19,7 @@ import com.gu.xiongdilian.R;
 import com.gu.xiongdilian.activity.XiongDiLianApplication;
 import com.gu.xiongdilian.activity.friends.FriendMainActivity;
 import com.gu.xiongdilian.activity.friends.NewFriendActivity;
+import com.gu.xiongdilian.activity.picstory.PicStoryMainActivity;
 import com.gu.xiongdilian.config.MyConfig;
 import com.gu.xiongdilian.receiver.MyMessageReceiver;
 import com.gu.xiongdilian.activity.xiongdilian.MyXiongDiLianHomeActivity;
@@ -129,6 +130,7 @@ public class HomeActivity extends XDLBaseWithCheckLoginActivity implements Event
                         go(FriendMainActivity.class);
                         break;
                     case PIC_STROY_LAYOUT:
+                        go(PicStoryMainActivity.class);
                         break;
                     case SETTING_CENTER_LILINEARLAYOUT:
                         go(SettingsActivity.class);

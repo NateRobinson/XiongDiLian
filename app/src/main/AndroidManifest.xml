@@ -160,6 +160,15 @@
             android:configChanges="keyboardHidden|orientation"
             android:screenOrientation="portrait"></activity>
         <activity
+            android:name=".activity.picstory.PicStoryMainActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".activity.picstory.MakePicStoryActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize"></activity>
+        <activity
             android:name=".activity.friends.ChatActivity"
             android:configChanges="keyboardHidden|orientation"
             android:hardwareAccelerated="false"
