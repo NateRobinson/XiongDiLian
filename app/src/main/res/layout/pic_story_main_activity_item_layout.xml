@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/divider2"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="@dimen/left_margin_big_10dp"
+            android:src="@mipmap/default_xiongdilian_headimg" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginLeft="@dimen/left_margin_normal_8dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:text="Nate"
+                android:textColor="@color/primary_text"
+                android:textSize="@dimen/text_font_size_title_16sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="bottom"
+                android:text="2015-12-9 16:33:33"
+                android:textColor="@color/secondary_text"
+                android:textSize="@dimen/text_font_size_small_12sp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <com.gu.baselibrary.view.MTextView
+        android:id="@+id/one_xiongdilian_desc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/left_margin_big_10dp"
+        android:layout_marginRight="@dimen/right_margin_big_10dp"
+        android:ellipsize="end"
+        android:maxLength="200"
+        android:padding="@dimen/padding_big_8dp"
+        android:textSize="@dimen/text_font_size_content_14sp"
+        app:textColor="@color/primary_text" />
+
+    <ImageView
+        android:id="@+id/pic_story_main_activity_item_iv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/left_margin_big_10dp"
+        android:layout_marginRight="@dimen/right_margin_big_10dp"
+        android:maxHeight="300dp"
+        android:minHeight="200dp"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/test" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="@dimen/left_margin_big_10dp"
+        android:layout_marginRight="@dimen/right_margin_big_10dp"
+        android:layout_marginTop="@dimen/top_margin_normal_8dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/pic_story_view_num_tv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableLeft="@mipmap/view"
+            android:drawablePadding="4dp"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:padding="4dp"
+            android:singleLine="true"
+            android:textColor="@color/primary_text"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/pic_story_praise_num_tv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableLeft="@mipmap/pic_story_praise_no"
+            android:drawablePadding="4dp"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:padding="4dp"
+            android:singleLine="true"
+            android:textColor="@color/primary_text"
+            android:textSize="14sp" />
+    </LinearLayout>
+</LinearLayout>

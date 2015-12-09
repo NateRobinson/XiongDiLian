@@ -129,8 +129,6 @@ public class HomeActivity extends XDLBaseWithCheckLoginActivity implements Event
                         go(FriendMainActivity.class);
                         break;
                     case PIC_STROY_LAYOUT:
-                        //intent.setClass(HomeActivity.this, PicStoryActivity.class);
-                        //startActivity(intent);
                         break;
                     case SETTING_CENTER_LILINEARLAYOUT:
                         go(SettingsActivity.class);
