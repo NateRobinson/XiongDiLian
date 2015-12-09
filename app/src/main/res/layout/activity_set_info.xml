@@ -65,9 +65,8 @@
             android:layout_centerHorizontal="true"
             android:layout_marginTop="8dp"
             android:singleLine="true"
-            android:textColor="@color/black"
-            android:textSize="18sp"
-            android:textStyle="bold|italic" />
+            android:textColor="@color/primary_text"
+            android:textSize="@dimen/text_font_size_title_16sp" />
 
         <TextView
             android:id="@+id/tv_set_city"
@@ -77,9 +76,8 @@
             android:layout_centerHorizontal="true"
             android:layout_marginTop="8dp"
             android:singleLine="true"
-            android:textColor="@color/black"
-            android:textSize="18sp"
-            android:textStyle="bold|italic" />
+            android:textColor="@color/primary_text"
+            android:textSize="@dimen/text_font_size_title_16sp" />
     </RelativeLayout>
 
 

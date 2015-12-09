@@ -87,8 +87,8 @@ public class UpdateInfoActivity extends XDLBaseWithCheckLoginActivity {
     @Override
     protected void initViewsAndEvents() {
         setCustomToolbar(ToolbarType.WITHBACK, R.string.modify_nick_name);
-        String nick=userManager.getCurrentUser().getNick();
-        if(!TextUtils.isEmpty(nick)){
+        String nick = userManager.getCurrentUser().getNick();
+        if (!TextUtils.isEmpty(nick)) {
             edit_nick.setText(nick);
             edit_nick.setSelection(nick.length());
         }
@@ -116,9 +116,11 @@ public class UpdateInfoActivity extends XDLBaseWithCheckLoginActivity {
      * 修改资料
      */
     private void updateInfo(String nick) {
-        final Account account = userManager.getCurrentUser(Account.class);
-        account.setNick(nick);
-        account.update(this, new UpdateListener() {
+        Account account = userManager.getCurrentUser(Account.class);
+        Account updateAccount = new Account();
+        updateAccount.setObjectId(account.getObjectId());
+        updateAccount.setNick(nick);
+        updateAccount.update(this, new UpdateListener() {
             @Override
             public void onSuccess() {
                 Intent intent = new Intent();

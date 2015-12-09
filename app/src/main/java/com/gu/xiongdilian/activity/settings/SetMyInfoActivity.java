@@ -255,9 +255,10 @@ public class SetMyInfoActivity extends XDLBaseWithCheckLoginActivity {
                     return;
                 }
                 final String city = data.getStringExtra(CityListActivity.CITY_KEY);
-                Account account = userManager.getCurrentUser(Account.class);
-                account.setCity(city);
-                account.update(this, new UpdateListener() {
+                Account updateCity = new Account();
+                updateCity.setObjectId(userManager.getCurrentUser(Account.class).getObjectId());
+                updateCity.setCity(city);
+                updateCity.update(this, new UpdateListener() {
                     @Override
                     public void onSuccess() {
                         showToast(R.string.update_address_success);
