@@ -111,8 +111,6 @@ public class MembersAdapter extends MyBaseAdapter<Account> {
     public void showDeleteDialog(final Account account) {
         final NormalDialog dialog = new NormalDialog(getContext());
         dialog.content("确定删除联系人?")
-                .showAnim(new FlipVerticalSwingEnter())
-                .dismissAnim(new FadeExit())
                 .show();
 
         dialog.setOnBtnLeftClickL(new OnBtnLeftClickL() {
