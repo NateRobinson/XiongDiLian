@@ -144,4 +144,4 @@
 > 
 > 地址：[https://github.com/square/picasso](https://github.com/square/picasso "https://github.com/square/picasso")
 > 
-> 介绍：https://github.com/square/picasso.
+> 介绍：A powerful image downloading and caching library for Android.
