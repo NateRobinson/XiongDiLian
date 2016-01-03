@@ -75,6 +75,10 @@
 ![首页图片](https://github.com/NateRobinson/XiongDiLian/blob/master/imgs/19.png?raw=true)
 ![首页图片](https://github.com/NateRobinson/XiongDiLian/blob/master/imgs/20.png?raw=true)
 
+**2.6 特别模块：**
+
+整个代码中还集成了腾讯的Bugly：[http://bugly.qq.com/](http://bugly.qq.com/ "http://bugly.qq.com/")，Bugly是腾讯内部使用的移动应用崩溃检测服务，同时支持 iOS 和 Android 平台。目前 Bugly 已经对移动开发者开放。移动开发者在自己的  App 中接入 Bugly 的 SDK 后，就能在应用崩溃后获得信息上报。开发者可以通过 Bugly 的网站看到崩溃的概要和详情。崩溃概要包括，崩溃的列表、近日按小时统计趋势、昨天前天的崩溃次数和崩溃率。
+
 ## 五 引用的开源库介绍： ##
 
 **1.Sweet Alert Dialog**
@@ -102,37 +106,37 @@
 > 介绍：An Android library project that provides a simple image cropping Activity, based on code from AOSP.
 
 **5.google-gson**
->
+> 
 > 地址：[https://github.com/google/gson](https://github.com/google/gson "https://github.com/google/gson")
->
-> 介绍：Gson is a Java library that can be used to convert Java Objects into their JSON representation. It can also be used to convert a JSON string to an equivalent Java object. Gson can work with arbitrary Java objects including pre-existing objects that you do not have source-code of.
+> 
+> 介绍：Gson is a Java library that can be used to convert Java Objects into their JSON representation. It can also be used to convert a JSON string to an equivalent Java object. Gson can work with arbitrary Java objects including pre-existing objects that you do not have source-code of. 
 
 **6.EventBus**
->
+> 
 > 地址：[https://github.com/greenrobot/EventBus](https://github.com/greenrobot/EventBus "https://github.com/greenrobot/EventBus")
->
+> 
 > 介绍：EventBus is publish/subscribe event bus optimized for Android.
 
 **7.Material Dialog v1.2.2**
->
+> 
 > 地址：[https://github.com/drakeet/MaterialDialog](https://github.com/drakeet/MaterialDialog "https://github.com/drakeet/MaterialDialog")
->
-> 介绍：This is an Android library, I call it MaterialDialog. It's very easy to use. Just new it & call show() method, then the beautiful AlertDialog will show automatically. It is artistic, conforms to Google Material Design. I hope that you will like it, and enjoys it.
+> 
+> 介绍：This is an Android library, I call it MaterialDialog. It's very easy to use. Just new it & call show() method, then the beautiful AlertDialog will show automatically. It is artistic, conforms to Google Material Design. I hope that you will like it, and enjoys it. 
 
 **8.SwitchButton**
->
+> 
 > 地址：[https://github.com/kyleduo/SwitchButton](https://github.com/kyleduo/SwitchButton "https://github.com/kyleduo/SwitchButton")
->
+> 
 > 介绍：This project provides you a convenient way to use and customise a SwitchButton widget in Android. With just resources changed and attrs set, you can create a lifelike SwitchButton of Android 5.0+, iOS, MIUI, or Flyme and so on.
 
 **9.Universal Image Loader**
->
+> 
 > 地址：[https://github.com/nostra13/Android-Universal-Image-Loader](https://github.com/nostra13/Android-Universal-Image-Loader "https://github.com/nostra13/Android-Universal-Image-Loader")
->
+> 
 > 介绍：Android library #1 on GitHub. UIL aims to provide a powerful, flexible and highly customizable instrument for image loading, caching and displaying. It provides a lot of configuration options and good control over the image loading and caching process.
 
 **10.Picasso**
->
+> 
 > 地址：[https://github.com/square/picasso](https://github.com/square/picasso "https://github.com/square/picasso")
->
-> 介绍：A powerful image downloading and caching library for Android.
+> 
+> 介绍：https://github.com/square/picasso.
