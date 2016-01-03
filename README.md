@@ -72,6 +72,9 @@
 
 个人中心里面有：个人资料，黑名单，接收消息控制，退出账号等功能模块。这块比较复杂的是个人资料界面，里面又集成了性别设置，昵称设置，城市设置功能模块。
 
+![首页图片](https://github.com/NateRobinson/XiongDiLian/blob/master/imgs/19.png?raw=true)
+![首页图片](https://github.com/NateRobinson/XiongDiLian/blob/master/imgs/20.png?raw=true)
+
 ## 五 引用的开源库介绍： ##
 
 **1.Sweet Alert Dialog**
