@@ -77,7 +77,12 @@
 
 **2.6 特别模块：**
 
-整个代码中还集成了腾讯的Bugly：[http://bugly.qq.com/](http://bugly.qq.com/ "http://bugly.qq.com/")，Bugly是腾讯内部使用的移动应用崩溃检测服务，同时支持 iOS 和 Android 平台。目前 Bugly 已经对移动开发者开放。移动开发者在自己的  App 中接入 Bugly 的 SDK 后，就能在应用崩溃后获得信息上报。开发者可以通过 Bugly 的网站看到崩溃的概要和详情。崩溃概要包括，崩溃的列表、近日按小时统计趋势、昨天前天的崩溃次数和崩溃率。
+**腾讯Bugly：**
+> 整个代码中还集成了腾讯的Bugly：[http://bugly.qq.com/](http://bugly.qq.com/ "http://bugly.qq.com/")，Bugly是腾讯内部使用的移动应用崩溃检测服务，同时支持 iOS 和 Android 平台。目前 Bugly 已经对移动开发者开放。移动开发者在自己的  App 中接入 Bugly 的 SDK 后，就能在应用崩溃后获得信息上报。开发者可以通过 Bugly 的网站看到崩溃的概要和详情。崩溃概要包括，崩溃的列表、近日按小时统计趋势、昨天前天的崩溃次数和崩溃率。
+
+**百度地图定位：**
+> 百度地图：[http://developer.baidu.com/map/index.php?title=%E9%A6%96%E9%A1%B5](http://developer.baidu.com/map/index.php?title=%E9%A6%96%E9%A1%B5 "http://developer.baidu.com/map/index.php?title=%E9%A6%96%E9%A1%B5") Android SDK是一套基于Android 2.1及以上版本设备的应用程序接口。 您可以使用该套 SDK开发适用于Android系统移动设备的地图应用，通过调用地图SDK接口，您可以轻松访问百度地图服务和数据，构建功能丰富、交互性强的地图类应用程序。
+
 
 ## 五 引用的开源库介绍： ##
 
